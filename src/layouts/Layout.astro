@@ -1,4 +1,8 @@
 ---
+import { ViewTransitions } from "astro:transitions";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
 interface Props {
   title: string;
 }
@@ -17,11 +21,18 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Header />
+
     <slot />
+    <Footer />
+    <ViewTransitions />
   </body>
   <script src="../js/main.js"></script>
 </html>
 <style is:global>
+  body {
+    position: relative;
+  }
   :root {
     --primary: #460e35;
     --text: #111e31;
