@@ -1,0 +1,74 @@
+---
+const courses = [
+  {
+    image: "/gallery/2.jpeg",
+    title: "Consmetologia",
+    url: "/cosmetologia",
+  },
+  {
+    image: "/gallery/2.jpeg",
+    title: "Barberia",
+    url: "/barberia",
+  },
+  {
+    image: "/gallery/2.jpeg",
+    title: "Peluqueria",
+    url: "/peluqueria/",
+  },
+];
+---
+
+<section
+  id="cursos"
+  class="flex my-[100px] scroll-mt-24 flex-col items-center gap-4 space-y-8"
+>
+  <div class="flex flex-col items-center gap-4">
+    <h2
+      class="gradient-text text-center font-extrabold tracking-tight text-6xl"
+    >
+      nuestros cursos
+    </h2>
+  </div>
+  <p class="max-w-xl text-center font-extrabold text-2xl">
+    Gambril es <span class="text-primary">Calidad</span>. <span
+      class="text-primary">Explora</span
+    > nuestras carreras tecnicas
+  </p>
+  <div class="max-w-6xl space-y-2">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      {
+        courses?.map((el) => (
+          <div class="group aspect-video">
+            <h2>Curso tecnico de {el.title}</h2>
+            <a class=" hover:!text-default" href={el.url}>
+              <figure class="relative h-full w-full overflow-hidden">
+                <img
+                  src={`${el.image}`}
+                  class="h-full w-full bg-cover object-cover transition-all duration-300 group-hover:scale-110 group-hover:opacity-20 group-focus:scale-110 group-focus:opacity-20"
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  alt={`Una imagen del curso de ${el.title}`}
+                  width="1585"
+                  height="900"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption class="absolute inset-0">
+                  <div class="flex h-full flex-col items-center justify-center gap-2 opacity-0 transition-all duration-300 group-hover:opacity-100 group-focus:opacity-100">
+                    <h3 class="text-center font-extrabold uppercase text-xl">
+                      {el.title}
+                    </h3>
+                    <a href={el.url}>
+                      <p class="border border-current px-4 py-2">
+                        mas informacion
+                      </p>
+                    </a>
+                  </div>
+                </figcaption>
+              </figure>
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

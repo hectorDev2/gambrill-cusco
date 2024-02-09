@@ -8,10 +8,9 @@ interface Props {
   subtitle?: string;
 }
 
-const offset = 10;
 const { edicion = 1 } = Astro.props;
 const editionIndex = Number(edicion) - 1;
-const photos = editionInfo[editionIndex].slice(0, offset);
+const photos = editionInfo[editionIndex];
 
 const { title, subtitle } = Astro.props;
 ---
@@ -34,7 +33,7 @@ const { title, subtitle } = Astro.props;
       photos.map(({ height, width }, i) => (
         <a
           class="group rounded-xl hover:scale-105 hover:contrast-[110%] transition-all relative"
-          href={`/gallery/${i + 1}.jpg`}
+          href={`/gallery/${i + 1}.jpeg`}
           target="_blank"
           data-cropped="true"
           data-pswp-width={width}
@@ -43,13 +42,13 @@ const { title, subtitle } = Astro.props;
           <img
             class="blur-md image opacity-0 group-hover:opacity-100 absolute inset-0 transition contrast-150 -z-10 object-cover"
             loading="lazy"
-            src={`/gallery/${i + 1}.jpg`}
+            src={`/gallery/${i + 1}.jpeg`}
             alt="Imagen con efecto blur para hacer de sombra de una fotografía de Skynet"
           />
           <img
             class="rounded-xl object-cover w-full h-auto"
             loading="lazy"
-            src={`/gallery/${i + 1}.jpg`}
+            src={`/gallery/${i + 1}.jpeg`}
             alt="Fotografía de Skynet"
           />
         </a>
@@ -59,13 +58,8 @@ const { title, subtitle } = Astro.props;
 </section>
 
 <script>
-  import { getSizes } from "../scripts/index";
   import PhotoSwipeLightbox from "photoswipe/lightbox";
   import "@appnest/masonry-layout";
-
-  // //module for get sizes of images
-  // let images = document.querySelectorAll(".image");
-  // let sizes = getSizes(images);
 
   document.addEventListener("astro:page-load", () => {
     const lightbox = new PhotoSwipeLightbox({
