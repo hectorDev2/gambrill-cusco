@@ -1,4 +1,5 @@
 ---
+import ButtonWhatssap from "./ButtonWhatssap.astro";
 interface Props {
   title: string;
   invert?: boolean;
@@ -24,7 +25,7 @@ const { subtitle, id, title, invert = false, img } = Astro.props;
       style="background: rgb(51, 217, 239);"
     >
     </div>
-    <img src={img} alt="" class="relative z-50 floating" /><div
+    <img src={img} alt="" class="relative floating" /><div
       class="w-36 h-36 rounded-full absolute z-0 right-16 -bottom-1 animate-pulse"
       style="background: rgb(91, 97, 235);"
     >
@@ -102,7 +103,7 @@ const { subtitle, id, title, invert = false, img } = Astro.props;
     <a
       href="https://api.whatsapp.com/send?phone=51957929331&text=Hola%20te%20escribo%20desde%20skynet%20%20%F0%9F%91%80%20"
     >
-      <button
+      <!-- <button
         class="bg-[#49C858] mx-auto text-white flex items-center justify-between py-2 px-5"
       >
         <svg
@@ -124,7 +125,8 @@ const { subtitle, id, title, invert = false, img } = Astro.props;
           ></path>
         </svg>
         ir whattsap</button
-      >
+      > -->
+      <ButtonWhatssap />
     </a>
   </div>
 </div>
