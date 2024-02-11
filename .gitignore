@@ -18,8 +18,4 @@ pnpm-debug.log*
 .env.production
 
 # macOS-specific files
-<<<<<<< HEAD
 .DS_Store
-=======
-.DS_Store
->>>>>>> ef57739 (feat)
