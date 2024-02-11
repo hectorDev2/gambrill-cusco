@@ -1,7 +1,7 @@
 ---
 import "@fontsource-variable/onest";
 import { ViewTransitions } from "astro:transitions";
-import Header from "../components/Header.astro";
+import Header2 from "../components/Header2.astro";
 import Footer from "../components/Footer.astro";
 import WhatsaapFloat from "../components/WhatsaapFloat.astro";
 
@@ -24,14 +24,17 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <Header />
+    <Header2 />
 
     <slot />
     <Footer />
     <WhatsaapFloat />
     <ViewTransitions />
   </body>
-  <script src="../js/main.js"></script>
+  <script
+    is:inline
+    src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"
+  ></script>
 </html>
 <style is:global>
   body {

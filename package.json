@@ -10,10 +10,17 @@
     "astro": "astro"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@fontsource-variable/onest": "^5.0.2",
     "@appnest/masonry-layout": "^2.2.3",
     "@astrojs/check": "^0.4.1",
     "@astrojs/tailwind": "^5.1.0",
+=======
+    "@appnest/masonry-layout": "^2.2.3",
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/tailwind": "^5.1.0",
+    "@fontsource-variable/onest": "^5.0.2",
+>>>>>>> ef57739 (feat)
     "@justinribeiro/lite-youtube": "^1.5.0",
     "aos": "next",
     "astro": "^4.3.2",
