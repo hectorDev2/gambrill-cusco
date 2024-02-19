@@ -2,10 +2,14 @@
 import Hero from "../Hero.astro";
 ---
 
-<div id="default-carousel" class="relative w-full" data-carousel="slide">
+<div
+  id="animation-carousel"
+  class="relative w-full overflow-hidden"
+  data-carousel="slide"
+>
   <!-- Carousel wrapper -->
   <div
-    class="mt-[200px] md:mt-[50px] mb-[50px] h-[500px] overflow-hidden rounded-lg md:h-156"
+    class="mt-[200px] overflow-hidden md:mt-[50px] mb-[50px] h-[500px] rounded-lg md:h-156"
   >
     <!-- Item 1 -->
     <div class="hidden duration-700 ease-in-out" data-carousel-item>

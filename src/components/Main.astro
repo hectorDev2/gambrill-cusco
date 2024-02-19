@@ -4,7 +4,7 @@ import Course from "./Course.astro";
 
 <div
   id="animation-carousel"
-  class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden"
+  class="container overflow-hidden px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden"
 >
   <div data-aos="flip-up" class="mx-auto mt-24 aos-init aos-animate">
     <div
@@ -31,7 +31,8 @@ import Course from "./Course.astro";
       />
       <video controls src="video.mp4" class="h-[500px] mx-auto md:mx-0"></video>
     </div>
-  </div><div class="grid relative md:grid-cols-3 gap-14 md:gap-5 mt-20">
+  </div>
+  <div class="grid relative md:grid-cols-3 gap-14 md:gap-5 mt-20">
     <a
       class="hover:scale-105 transition-transform ease-in-out"
       href="
@@ -93,7 +94,8 @@ import Course from "./Course.astro";
         </p>
       </div>
     </a>
-  </div><div class="mt-28">
+  </div>
+  <div class="mt-28">
     <div
       data-aos="flip-down"
       class="text-center max-w-screen-md mx-auto aos-init aos-animate"
