@@ -9,7 +9,7 @@ interface Props {
 const { imgSlider, title, subtitle } = Astro.props;
 ---
 
-<div class="bg-cream mt-10 z-[-1]" data-aos=" fade-up">
+<div class="bg-cream px-5 pt-12 sm:pt-52 lg:pt-10 z-[-1]" data-aos=" fade-up">
   <div
     class="max-w-screen-xl md:px-8 mx-auto flex flex-col lg:flex-row-reverse items-start"
   >
@@ -48,7 +48,7 @@ const { imgSlider, title, subtitle } = Astro.props;
         data-aos="fade-up"
         data-aos-once="true"
         src={imgSlider}
-        class="mt-10 w-10/12 mx-auto 2xl:-mb-20 aos-init aos-animate"
+        class="w-[250px] mt-10 lg:w-10/12 mx-auto 2xl:-mb-20 aos-init aos-animate"
       /><div
         data-aos="fade-up"
         data-aos-delay="300"
