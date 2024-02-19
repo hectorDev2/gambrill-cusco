@@ -3,11 +3,14 @@ import Course from "./Course.astro";
 ---
 
 <div
+  id="animation-carousel"
   class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden"
 >
   <div data-aos="flip-up" class="mx-auto mt-24 aos-init aos-animate">
-    <div class="flex relative justify-center items-center gap-10">
-      <div class="w-[500px]">
+    <div
+      class="mt-[200px] sm:mt-[100px] md:flex relative justify-center items-center gap-10"
+    >
+      <div class="max-w-[500px]">
         <h1 class="font-bold text-4xl text-darken my-3">
           Somos <span class="text-[var(--primary)]">Gambril</span>
         </h1>
@@ -26,7 +29,7 @@ import Course from "./Course.astro";
         class="absolute top-0 left-0 opacity-10"
         alt="bacground barber ad"
       />
-      <video controls src="video.mp4" class="h-[500px]"></video>
+      <video controls src="video.mp4" class="h-[500px] mx-auto md:mx-0"></video>
     </div>
   </div><div class="grid relative md:grid-cols-3 gap-14 md:gap-5 mt-20">
     <a
