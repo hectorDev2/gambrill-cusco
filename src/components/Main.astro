@@ -6,7 +6,7 @@ import Course from "./Course.astro";
   class="container px-4 lg:px-8 mx-auto max-w-screen-xl text-gray-700 overflow-x-hidden"
 >
   <div data-aos="flip-up" class="mx-auto mt-24 aos-init aos-animate">
-    <div class="flex justify-center items-center gap-10">
+    <div class="flex relative justify-center items-center gap-10">
       <div class="w-[500px]">
         <h1 class="font-bold text-4xl text-darken my-3">
           Somos <span class="text-[var(--primary)]">Gambril</span>
@@ -21,10 +21,14 @@ import Course from "./Course.astro";
           Ofrecemos cursos de peluqueria, barberia y cosmetologia.
         </p>
       </div>
-
+      <img
+        src="barber-ad.png"
+        class="absolute top-0 left-0 opacity-10"
+        alt="bacground barber ad"
+      />
       <video controls src="video.mp4" class="h-[500px]"></video>
     </div>
-  </div><div class="grid md:grid-cols-3 gap-14 md:gap-5 mt-20">
+  </div><div class="grid relative md:grid-cols-3 gap-14 md:gap-5 mt-20">
     <a
       class="hover:scale-105 transition-transform ease-in-out"
       href="
@@ -43,8 +47,8 @@ import Course from "./Course.astro";
           Formación en cuidado de la piel, maquillaje, manicura y pedicura para
           resaltar la belleza natural de los clientes.
         </p>
-      </div></a
-    >
+      </div>
+    </a>
     <a
       class="hover:scale-105 transition-transform ease-in-out"
       href="#barberia"
@@ -111,12 +115,14 @@ import Course from "./Course.astro";
   </div>
 
   <Course
+    imgBg="/bg/cosmetologia-bg.png"
     subtitle="Formación en cuidado de la piel, maquillaje, manicura y pedicura para resaltar la belleza natural de los clientes."
     img="gallery/2.jpeg"
     id="cosmetologia"
     title="Cosmetologia"
   />
   <Course
+    imgBg="barber-ad.png"
     subtitle="Capacitación en cortes de cabello, afeitado y cuidado de la barba, con habilidades empresariales clave."
     img="barber_course.jpeg"
     id="barberia"
@@ -124,6 +130,7 @@ import Course from "./Course.astro";
     title="Barberia"
   />
   <Course
+    imgBg="bg/peluqueria-bg.png"
     subtitle="Habilidades avanzadas en corte, peinado, coloración y tratamiento del cabello para el éxito en salones y más."
     img="gallery/17.jpeg"
     id="peluqueria"

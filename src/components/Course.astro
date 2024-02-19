@@ -6,9 +6,10 @@ interface Props {
   id: string;
   img: string;
   subtitle: string;
+  imgBg: string;
 }
 
-const { subtitle, id, title, invert = false, img } = Astro.props;
+const { subtitle, imgBg, id, title, invert = false, img } = Astro.props;
 ---
 
 <div
@@ -36,7 +37,11 @@ const { subtitle, id, title, invert = false, img } = Astro.props;
     >
     </div>
   </div>
-  <div data-aos="fade-down" class="md:w-5/12 md:mt-0 text-gray-500 aos-init">
+  <div
+    data-aos="fade-down"
+    class="md:w-5/12 md:mt-0 relative text-gray-500 aos-init"
+  >
+    <img src={imgBg} class="absolute top-0 right-0 opacity-10" alt="" />
     <h2 class="my-2 uppercase font-bold text-3xl">{title}</h2>
 
     <h1 class="text-2xl font-semibold text-darken">
